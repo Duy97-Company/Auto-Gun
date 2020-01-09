@@ -1,0 +1,8 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Duy97-Company/Auto-Gun.git",
+  "author": "duyphaphach <duyphamle97@gmail.com>",
+  "license": "MIT"
+}
