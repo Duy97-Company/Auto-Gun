@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:Duy97-Company/Auto-Gun.git",
   "author": "duyphaphach <duyphamle97@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test:unit": "npx jest --runInBand",
+    "test:integration": "npx jest --runInBand"
+  },
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
 }
