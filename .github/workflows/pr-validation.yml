@@ -31,3 +31,4 @@ jobs:
           yarn run test:integration
         env:
           CI: true
+
