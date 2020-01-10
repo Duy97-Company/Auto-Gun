@@ -1,14 +1,14 @@
 name: Node CI
 
 
-on: 
+on:
   pull_request:
     branches:
       - develop
 
 jobs:
-  PR Validation:
-   
+  pr-validation:
+
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
