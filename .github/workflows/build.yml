@@ -22,8 +22,8 @@ jobs:
           npm install -g yarn
           yarn install
       - name: test
-          run: |
-            yarn run test:unit:coverage
+        run: |
+          yarn run test:unit:coverage
       - name: build
         run: |
           yarn run build
