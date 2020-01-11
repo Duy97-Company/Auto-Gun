@@ -19,7 +19,6 @@ issueComment: >
 
 # Message for a new user who opens a PR
 prOpen: >
-  Hello World! Welcome to the project!
   Thankyou and congarts for your first PR on this project.
   We will review it soon!
   Till then you can checkout the ReadMe for more details on it.
