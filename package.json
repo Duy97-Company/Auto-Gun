@@ -14,7 +14,7 @@
     "build": "yarn install"
   },
   "dependencies": {
-    "codacy-coverage": "^3.4.0",
+    "codacy-coverage": "3.4.0",
     "jest": "^24.9.0"
   },
   "husky": {
@@ -23,9 +23,9 @@
     }
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.20.0",
     "husky": "4.0.7",
     "lint-staged": "9.5.0"
   }
