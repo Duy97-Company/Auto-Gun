@@ -6,7 +6,7 @@
   "author": "duyphaphach <duyphamle97@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "pre-commit": "lint-staged",
+    "pre-commit": "yarn run lint:scripts",
     "lint:scripts": "npx eslint --ext .js",
     "lint:scripts:fix": "npx eslint --ext .js --fix",
     "test:unit": "npx jest --runInBand",
@@ -18,14 +18,9 @@
     "codacy-coverage": "^3.4.0",
     "jest": "^24.9.0"
   },
-  "lint-staged": {
-    "**/*.{js,jsx}": [
-      "eslint . --fix", "git add"
-    ]
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pre-commit"
     }
   },
   "devDependencies": {
