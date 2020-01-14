@@ -6,7 +6,6 @@
   "author": "duyphaphach <duyphamle97@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "pre-commit": "yarn run lint:scripts",
     "lint:scripts": "npx eslint --ext .js",
     "lint:scripts:fix": "npx eslint --ext .js --fix",
     "test:unit": "npx jest --runInBand",
@@ -20,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pre-commit"
+      "pre-commit": "yarn run lint:scripts"
     }
   },
   "devDependencies": {
