@@ -15,7 +15,9 @@
     "codacy-coverage": "^3.4.0",
     "jest": "^24.9.0"
   },
-  "lint-pre-commit": ["yarn run test:integration", "yarn run build"],
+  "lint-pre-commit": {
+    "*./js": ["yarn run test:integration", "yarn run build"]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-pre-commit"
