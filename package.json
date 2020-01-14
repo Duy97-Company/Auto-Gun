@@ -14,5 +14,10 @@
   "dependencies": {
     "codacy-coverage": "^3.4.0",
     "jest": "^24.9.0"
+  },
+  "lint-staged": ["yarn run test:integration", "yarn run build"],
+  "devDependencies": {
+    "husky": "4.0.7",
+    "lint-staged": "9.5.0"
   }
 }
