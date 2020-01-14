@@ -6,6 +6,9 @@
   "author": "duyphaphach <duyphamle97@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "pre-commit": "lint-staged",
+    "lint:scripts": "npx eslint --ext .js",
+    "lint:scripts:fix": "npx eslint --ext .js --fix",
     "test:unit": "npx jest --runInBand",
     "test:integration": "npx jest --runInBand",
     "test:unit:coverage": "npx jest --coverage && codacy-coverage < ./coverage/lcov.info --debug --token=c8838d9d2cbf4ddf8e64265241982c98",
@@ -15,15 +18,23 @@
     "codacy-coverage": "^3.4.0",
     "jest": "^24.9.0"
   },
-  "lint-pre-commit": {
-    "*./js": ["yarn run test:integration", "yarn run build"]
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix", "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix", "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-pre-commit"
+      "pre-commit": "lint-staged"
     }
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
     "husky": "4.0.7",
     "lint-staged": "9.5.0"
   }
