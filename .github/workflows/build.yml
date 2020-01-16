@@ -4,26 +4,36 @@ on:
   push:
     branches:
       - develop
+      - master
+      - feature/**
+      - dependabot/**
+  pull_request:
+    branches:
+      - develop
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: ['8']
+        node: ['8']
         os: [windows-latest]
     steps:
+      - name: Clone repository
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Setup environment with node
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Setup environment
+          node-version: ${{ matrix.node }}
         run: |
           npm install -g yarn
           yarn install
+
       - name: test
         run: |
           yarn run test:unit:coverage
+
       - name: build
         run: |
-          yarn run build
+          yarn run build:win
