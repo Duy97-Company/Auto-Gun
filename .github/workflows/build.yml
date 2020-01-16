@@ -45,5 +45,5 @@ jobs:
         run: |
           yarn run test:unit
       - name: Run integration tests
-          run: |
-            yarn run test:integration
+        run: |
+          yarn run test:integration
