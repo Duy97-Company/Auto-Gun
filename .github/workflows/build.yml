@@ -4,32 +4,26 @@ on:
   push:
     branches:
       - develop
-      - master
-      - feature/**
-      - dependabot/**
-  pull_request:
-    branches:
-      - develop
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['8']
+        node_version: ['8']
         os: [windows-latest]
     steps:
       - uses: actions/checkout@v1
-      - name: Setup environment with node
+      - name: Setup environment with node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
-      - run: |
+          node-version: ${{ matrix.node_version }}
+      - name: Install U1
+        run: |
           npm install -g yarn
           yarn install
       - name: test
-      - run: |
+        run: |
           yarn run test:unit:coverage
       - name: build
-      - run: |
-          yarn run build:win
+        run: |
+          yarn run build
