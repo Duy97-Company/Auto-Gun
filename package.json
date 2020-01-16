@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "lint:scripts": "npx eslint ./",
-    "lint:scripts:fix": "npx eslint --ext .js --fix",
+    "lint:scripts:fix": "npx eslint ./ --fix",
     "test:unit": "npx jest --runInBand",
     "test:integration": "npx jest --runInBand",
     "test:unit:coverage": "npx jest --coverage && codacy-coverage < ./coverage/lcov.info --debug --token=c8838d9d2cbf4ddf8e64265241982c98",
