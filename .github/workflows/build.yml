@@ -39,8 +39,8 @@ jobs:
         run: |
           yarn install
       - name: Run linting
-          run: |
-            yarn run lint:scripts
+        run: |
+          yarn run lint:scripts
       - name: Run unit tests
         run: |
           yarn run test:unit
