@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+      - features/**
+      - dependabot/**
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
