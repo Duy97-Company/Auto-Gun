@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install -g install
           echo "::set-output name=dir::$(yarn cache dir)"
-      - shell: cmd
+        shell: cmd
       - name: Load yarn cache
         uses: actions/cache@v1
         with:
