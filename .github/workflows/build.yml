@@ -1,14 +1,14 @@
-name: build
+name: Pull Request Validation
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
-  pull_request:
+  push:
     branches:
       - master
       - develop
-      - features/**
+      - feature/**
       - dependabot/**
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         os: [windows-latest]
     steps:
       - uses: actions/checkout@v1
-      - name: Get yarn cache
+      - name: Load yarn cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
         id: yarn-cache
       - uses: actions/cache@v1
@@ -33,9 +33,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
-      - name: Install U1
         run: |
-          npm install -g yarn
+          npm install -g install
+      - name: Install dependencies
+        run: |
           yarn install
       - name: test
         run: |
