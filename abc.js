@@ -4,6 +4,8 @@ const executor = function (task, fakeTime) {
   return new Promise((resolve) => setTimeout(() => resolve(task), fakeTime));
 };
 
+
+
 module.exports = async function (task, message, fakeTime) {
   const spinner = ora({
     text: message,
