@@ -6,6 +6,10 @@ const executor = function (task, fakeTime) {
 
 
 
+
+
+
+
 module.exports = async function (task, message, fakeTime) {
   const spinner = ora({
     text: message,
@@ -18,3 +22,6 @@ module.exports = async function (task, message, fakeTime) {
   spinner.succeed();
   return output;
 };
+
+
+
