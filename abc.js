@@ -16,7 +16,7 @@ module.exports = async function (task, message, fakeTime) {
     spinner: 'dots',
     indent: 0,
   });
-
+zxzx
   spinner.start();
   const output = await executor(task, fakeTime);
   spinner.succeed();
