@@ -12,6 +12,8 @@ console.log = (input) => {
   logRecord += input;
 };
 
+
+
 waitKeyToExit();
 
 console.log(logRecord === '\nPress any key to exit..')
