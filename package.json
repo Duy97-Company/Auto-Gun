@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "codacy-coverage": "3.4.0",
-    "jest": "24.9.0"
+    "jest": "26.2.1"
   },
   "husky": {
     "hooks": {
